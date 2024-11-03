@@ -1,4 +1,4 @@
-def get_node_templates(name, namespace):
+def get_node_template(name, namespace):
   r = get_resource("device.network.kubenet.dev/v1alpha1", "NodeTemplate")
   rsp = client_get(name, namespace, r["resource"])
   if rsp["error"] != None:
