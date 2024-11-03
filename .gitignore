@@ -34,3 +34,4 @@ scripts/
 kubeconfig
 tls.crt
 tls.key
+db
