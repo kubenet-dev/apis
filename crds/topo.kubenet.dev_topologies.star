@@ -57,7 +57,6 @@ def build_link(self, topo_link, nodes):
     site = node_spec.get("site", "")
 
     port = endpoint.get("port", 0)
-    print("endpoint", endpoint)
     ep_id = endpoint.get("endpoint", 0)
     endpoints.append(
       {

@@ -6,7 +6,6 @@ def get_node_template(name, namespace):
   return rsp["resource"], None
 
 def build_port(self, portID):
-  print("build_port portID", portID)
   # self = node
   """Constructs a node resource from topology node data."""
   node = {
@@ -30,8 +29,6 @@ def build_adaptor(self, portID, adaptor):
   # self = node
   """Constructs a node resource from topology node data."""
   adaptor_name = adaptor.get("name", "")
-  print("build_port portID", portID)
-  print("build_port adaptor_name", adaptor_name)
 
   node = {
     "apiVersion": "infra.kuid.dev/v1alpha1",
@@ -55,9 +52,6 @@ def build_endpoint(self, portID, adaptor, connectorID):
   # self = node
   """Constructs a node resource from topology node data."""
   adaptor_name = adaptor.get("name", "")
-  print("build_port portID", portID)
-  print("build_port adaptor_name", adaptor_name)
-  print("build_port connectorID", connectorID)
 
   node = {
     "apiVersion": "infra.kuid.dev/v1alpha1",
