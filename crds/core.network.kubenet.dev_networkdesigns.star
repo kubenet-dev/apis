@@ -13,7 +13,7 @@ def get_ipindex(self):
   interface_loopback = self.get("spec", {}).get("interfaces", {}).get("loopback", {})
   for prefix in interface_loopback.get("prefixes", []):
     prefixes.append({
-      "prefix": prefix.get("prefix", ""),
+      "prefix": prefix.get("prefix", {}),
       "labels": {"infra.kuid.dev/purpose": "loopback"},
     })
 
@@ -78,6 +78,7 @@ def get_node_ipclaims(self, node):
   af = "ipv6"
   if interface_loopback.get("addressing") == "dualstack" or interface_loopback.get("addressing") == "ipv6numbered":
       ip_claims.append(".".join([node_name, af]), namespace, index)
+  return ip_claims
 
 
 def get_ipclaim_pool(name, namespace, index, af):
