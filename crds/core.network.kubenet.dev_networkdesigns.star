@@ -5,7 +5,6 @@ def get_network_design(name, namespace):
     return None, rsp["error"]
   return rsp["resource"], None
 
-
 def get_ipindex(self):
   namespace = self.get("metadata", {}).get("namespace", "")
   partition = self.get("metadata", {}).get("name", "")
@@ -14,14 +13,14 @@ def get_ipindex(self):
   interface_loopback = self.get("spec", {}).get("interfaces", {}).get("loopback", {})
   for prefix in interface_loopback.get("prefixes", []):
     prefixes.append({
-      "prefix": prefix,
+      "prefix": prefix.get("prefix", ""),
       "labels": {"infra.kuid.dev/purpose": "loopback"},
     })
 
   interface_underlay = self.get("spec", {}).get("interfaces", {}).get("underlay", {})
   for prefix in interface_loopback.get("prefixes", []):
     prefixes.append({
-      "prefix": prefix,
+      "prefix": prefix.get("prefix", ""),
       "labels": {"infra.kuid.dev/purpose": "underlay"},
     })
 
