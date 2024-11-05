@@ -95,7 +95,7 @@ def get_ipclaim_pool(name, namespace, index, af):
       "selector": {
         "matchLabels": {
           "infra.kuid.dev/purpose": "loopback",
-          "ipam.be.kuid.dev/address-family": af,
+          #"ipam.be.kuid.dev/address-family": af,
         },
       },
     },
@@ -115,7 +115,7 @@ def get_node_asclaims(self, node):
     spec = {"index": partition,"id": ibgp.get("as", 0)}
     as_claims.append(get_asclaim(as_claim_name, namespace, spec)) 
   # is ebgp enabled
-  ebgp = protocols.get("ibgp", None)
+  ebgp = protocols.get("ebgp", None)
   if ebgp != None:
     as_claim_name = partition + "." + "aspool"
     spec = {"index": partition,"range": ebgp.get("asPool", "")}
