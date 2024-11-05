@@ -25,7 +25,7 @@ def get_ipindex(self):
       "labels": {"infra.kuid.dev/purpose": "underlay"},
     })
 
-  return = {
+  return {
     "apiVersion": "ipam.be.kuid.dev/v1alpha1",
     "kind": "IPIndex",
     "metadata": {
@@ -38,7 +38,7 @@ def get_ipindex(self):
   }
 
 def get_asindex(self):
-  return = {
+  return {
     "apiVersion": "as.be.kuid.dev/v1alpha1",
     "kind": "ASIndex",
     "metadata": {
@@ -49,7 +49,7 @@ def get_asindex(self):
   }
 
 def get_genidindex(self):
-  return = {
+  return {
     "apiVersion": "genid.be.kuid.dev/v1alpha1",
     "kind": "GENIDIndex",
     "metadata": {
@@ -82,7 +82,7 @@ def get_node_ipclaims(self, node):
 
 
 def get_ipclaim_pool(name, namespace, index, af):
-  return = {
+  return {
     "apiVersion": "ipam.be.kuid.dev/v1alpha1",
     "kind": "IPClaim",
     "metadata": {
