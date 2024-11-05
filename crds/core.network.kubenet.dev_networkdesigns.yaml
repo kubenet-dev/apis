@@ -77,8 +77,8 @@ spec:
                           network
                         enum:
                         - dualstack
-                        - ipv4only
-                        - ipv6only
+                        - ipv4numbered
+                        - ipv6numbered
                         - ipv4unnumbered
                         - ipv6unnumbered
                         type: string
@@ -122,8 +122,8 @@ spec:
                           network
                         enum:
                         - dualstack
-                        - ipv4only
-                        - ipv6only
+                        - ipv4numbered
+                        - ipv6numbered
                         - ipv4unnumbered
                         - ipv6unnumbered
                         type: string

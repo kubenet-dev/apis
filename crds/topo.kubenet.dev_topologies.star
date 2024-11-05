@@ -9,6 +9,7 @@ def get_value_or_default(dict, defaults, key):
 
 # Constructs a node resource from topology node data.
 def build_node(self, topo_node):
+  # self is topology
   defaults = self.get("spec", {}).get("defaults", "")
   partition = self.get("metadata", {}).get("name", "")
   region = get_value_or_default(topo_node, defaults, "region")

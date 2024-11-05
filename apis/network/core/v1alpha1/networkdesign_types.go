@@ -59,7 +59,7 @@ type NetworkDesignInterfaceParameters struct {
 	// prefixLength would be indicated by a label
 	Prefixes []ipambev1alpha1.Prefix `json:"prefixes,omitempty" yaml:"prefixes,omitempty" protobuf:"bytes,1,rep,name=prefixes"`
 	// Addressing defines the addressing used in this network
-	// +kubebuilder:validation:Enum=dualstack;ipv4only;ipv6only;ipv4unnumbered;ipv6unnumbered
+	// +kubebuilder:validation:Enum=dualstack;ipv4numbered;ipv6numbered;ipv4unnumbered;ipv6unnumbered
 	// +kubebuilder:default=dualstack
 	Addressing Addressing `json:"addressing,omitempty" yaml:"addressing,omitempty" protobuf:"bytes,2,opt,name=addressing"`
 	// BFD defines if BFD is enabled on the interfaces or not
