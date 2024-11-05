@@ -18,7 +18,7 @@ def get_ipindex(self):
     })
 
   interface_underlay = self.get("spec", {}).get("interfaces", {}).get("underlay", {})
-  for prefix in interface_loopback.get("prefixes", []):
+  for prefix in interface_underlay.get("prefixes", []):
     prefixes.append({
       "prefix": prefix.get("prefix", ""),
       "labels": {"infra.kuid.dev/purpose": "underlay"},
@@ -95,7 +95,7 @@ def get_ipclaim_pool(name, namespace, index, af):
       "selector": {
         "matchLabels": {
           "infra.kuid.dev/purpose": "loopback",
-          #"ipam.be.kuid.dev/address-family": af,
+          "ipam.be.kuid.dev/address-family": af,
         },
       },
     },
