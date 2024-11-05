@@ -72,12 +72,12 @@ def get_node_ipclaims(self, node):
   interface_loopback = self.get("spec", {}).get("interfaces", {}).get("loopback", {})
   af = "ipv4"
   if interface_loopback.get("addressing") == "dualstack" or interface_loopback.get("addressing") == "ipv4numbered":
-      ip_claims.append(".".join([node_name, af]), namespace, index)
+      ip_claims.append(get_ipclaim_pool(".".join([node_name, af]), namespace, index,af))
   else:
-      ip_claims.append(".".join([node_name, "routerid"]), namespace, index)
+      ip_claims.append(get_ipclaim_pool(".".join([node_name, "routerid"]), namespace, index, af))
   af = "ipv6"
   if interface_loopback.get("addressing") == "dualstack" or interface_loopback.get("addressing") == "ipv6numbered":
-      ip_claims.append(".".join([node_name, af]), namespace, index)
+      ip_claims.append(get_ipclaim_pool(".".join([node_name, af]), namespace, index, af))
   return ip_claims
 
 
