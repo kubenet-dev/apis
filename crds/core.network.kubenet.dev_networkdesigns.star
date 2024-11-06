@@ -144,6 +144,7 @@ def get_node_asclaims(self, node):
       }
     }
     as_claims.append(get_asclaim(node_name, namespace, spec)) 
+  return as_claims
   
 def get_asclaim(name, namespace, spec):
   return {
