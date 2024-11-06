@@ -58,7 +58,7 @@ def get_genidindex(self):
     },
     "spec": {
       "minID": 0,
-      "maxID": 4095,
+      "maxID": 16383,
       "type": "16bit",
     },
   }
@@ -102,10 +102,10 @@ def get_ipclaim_pool(name, namespace, index, af):
     },
   }
 
-def get_node_asclaims(self, node):
+def get_asclaims(self):
+  # self is network design
   partition = self.get("metadata", {}).get("name", "")
   namespace = self.get("metadata", {}).get("namespace", "")
-  node_name = node.get("metadata", {}).get("name", "")
   
   as_claims = []
   protocols = self.get("spec", {}).get("protocols", {})
@@ -123,6 +123,27 @@ def get_node_asclaims(self, node):
     as_claims.append(get_asclaim(as_claim_name, namespace, spec)) 
   return as_claims
 
+def get_node_asclaims(self, node):
+  # self is network design
+  partition = self.get("metadata", {}).get("name", "")
+  namespace = self.get("metadata", {}).get("namespace", "")
+  node_name = node.get("metadata", {}).get("name", "")
+
+  as_claims = []
+  # is ebgp enabled
+  ebgp = protocols.get("ebgp", None)
+  if ebgp != None:
+    as_claim_name = partition + "." + "aspool"
+    spec = {
+      "index": partition,
+      "selector": {
+        "matchLabels": {
+          "be.kuid.dev/claim-name": partition + "." + "aspool"
+        },
+      }
+    }
+    as_claims.append(get_asclaim(node_name, namespace, spec)) 
+  
 def get_asclaim(name, namespace, spec):
   return {
     "apiVersion": "as.be.kuid.dev/v1alpha1",
