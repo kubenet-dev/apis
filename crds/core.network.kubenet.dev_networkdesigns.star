@@ -130,6 +130,7 @@ def get_node_asclaims(self, node):
   node_name = node.get("metadata", {}).get("name", "")
 
   as_claims = []
+  protocols = self.get("spec", {}).get("protocols", {})
   # is ebgp enabled
   ebgp = protocols.get("ebgp", None)
   if ebgp != None:
