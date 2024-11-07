@@ -30,6 +30,9 @@ all:
 install: 
 	curl -sL https://github.com/henderiw/knetctl/raw/main/install.sh
 
+.PHONY: generate
+generate: controller-gen 
+	$(CONTROLLER_GEN) object:headerFile="hack/boilerplate.go.txt" paths="./apis/..."
 
 .PHONY: crds
 crds: controller-gen ## Generate WebhookConfiguration, ClusterRole and CustomResourceDefinition objects.
