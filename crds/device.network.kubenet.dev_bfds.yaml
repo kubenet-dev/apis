@@ -49,7 +49,7 @@ spec:
                 description: Adaptor defines the name of the adaptor
                 type: string
               enabled:
-                description: Enabled defines if bfd is enabled or not
+                description: Disabled defines if bfd is disabled or not
                 type: boolean
               endpoint:
                 description: Endpoint defines the name of the endpoint
@@ -58,44 +58,30 @@ spec:
                 description: ID defines the id of the BFD
                 format: int32
                 type: integer
-              inline:
-                description: BFD defines the BFD parameters
-                properties:
-                  enabled:
-                    description: Disabled defines if bfd is disabled or not
-                    type: boolean
-                  minEchoRx:
-                    description: MinEchoRx defines the echo function timer, in msec.
-                    format: int32
-                    type: integer
-                  minRx:
-                    description: MinTx defines the required minimal interval for receiving
-                      BFD packets, in msec.
-                    format: int32
-                    type: integer
-                  minTx:
-                    description: MinTx defines the desired minimal interval for sending
-                      BFD packets, in msec.
-                    format: int32
-                    type: integer
-                  multiplier:
-                    description: Multiplier defines the number of missed packets before
-                      the session is considered down
-                    format: int32
-                    type: integer
-                  ttl:
-                    description: TTL defines the time to live on the outgoing BFD
-                      packet
-                    format: int32
-                    maximum: 255
-                    minimum: 2
-                    type: integer
-                type: object
+              minEchoRx:
+                description: MinEchoRx defines the echo function timer, in msec.
+                format: int32
+                type: integer
+              minRx:
+                description: MinTx defines the required minimal interval for receiving
+                  BFD packets, in msec.
+                format: int32
+                type: integer
+              minTx:
+                description: MinTx defines the desired minimal interval for sending
+                  BFD packets, in msec.
+                format: int32
+                type: integer
               module:
                 description: Module defines the module reference id
                 type: integer
               moduleBay:
                 description: ModuleBay defines the moduleBay reference id
+                type: integer
+              multiplier:
+                description: Multiplier defines the number of missed packets before
+                  the session is considered down
+                format: int32
                 type: integer
               name:
                 description: Name is used to refer to internal names of the node
@@ -116,10 +102,15 @@ spec:
               site:
                 description: Site defines the site of the resource
                 type: string
+              ttl:
+                description: TTL defines the time to live on the outgoing BFD packet
+                format: int32
+                maximum: 255
+                minimum: 2
+                type: integer
             required:
             - endpoint
             - id
-            - inline
             - node
             - partition
             - port

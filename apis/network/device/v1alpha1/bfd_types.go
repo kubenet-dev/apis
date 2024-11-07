@@ -33,7 +33,7 @@ type BFDSpec struct {
 	// Enabled defines if bfd is enabled or not
 	Enabled *bool `json:"enabled,omitempty" protobuf:"bytes,3,opt,name=enabled"`
 	// BFD defines the BFD parameters
-	BFD *corenetworkv1alpha1.BFDLinkParameters `json:"inline" protobuf:"bytes,4,opt,name=bfd"`
+	BFD *corenetworkv1alpha1.BFDLinkParameters `json:",inline" protobuf:"bytes,4,opt,name=bfd"`
 }
 
 // BFDStatus defines the observed state of BFD
