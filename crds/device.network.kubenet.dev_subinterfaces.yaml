@@ -137,6 +137,10 @@ spec:
                   endpoint:
                     description: Endpoint defines the name of the endpoint
                     type: integer
+                  id:
+                    description: ID defines the id of the subinterface
+                    format: int32
+                    type: integer
                   ipv4:
                     description: IPv4 defines the ipv4 parameters for the subinterface
                     properties:
@@ -184,6 +188,7 @@ spec:
                     type: string
                 required:
                 - endpoint
+                - id
                 - node
                 - partition
                 - port
