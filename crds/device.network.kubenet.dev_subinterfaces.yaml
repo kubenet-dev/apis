@@ -131,6 +131,12 @@ spec:
                 description: Peer defines the peer subinterface parameters of the
                   subinterface
                 properties:
+                  adaptor:
+                    description: Adaptor defines the name of the adaptor
+                    type: string
+                  endpoint:
+                    description: Endpoint defines the name of the endpoint
+                    type: integer
                   ipv4:
                     description: IPv4 defines the ipv4 parameters for the subinterface
                     properties:
@@ -151,6 +157,38 @@ spec:
                           type: string
                         type: array
                     type: object
+                  module:
+                    description: Module defines the module reference id
+                    type: integer
+                  moduleBay:
+                    description: ModuleBay defines the moduleBay reference id
+                    type: integer
+                  name:
+                    description: Name is used to refer to internal names of the node
+                    type: string
+                  node:
+                    description: Node defines the name of the node
+                    type: string
+                  partition:
+                    description: Partition defines the partition this resource belongs
+                      to
+                    type: string
+                  port:
+                    description: Port defines the id of the port
+                    type: integer
+                  region:
+                    description: Region defines the region of the resource
+                    type: string
+                  site:
+                    description: Site defines the site of the resource
+                    type: string
+                required:
+                - endpoint
+                - node
+                - partition
+                - port
+                - region
+                - site
                 type: object
               port:
                 description: Port defines the id of the port

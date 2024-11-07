@@ -56,11 +56,11 @@ type SubInterfaceIPv6 struct {
 }
 
 type SubInterfacePeer struct {
-
+	kuididv1alpha1.PartitionEndpointID `json:",inline" protobuf:"bytes,1,opt,name=partitionEndpointID"`
 	// IPv4 defines the ipv4 parameters for the subinterface
-	IPv4 *SubInterfaceIPv4 `json:"ipv4,omitempty" protobuf:"bytes,5,opt,name=ipv4"`
+	IPv4 *SubInterfaceIPv4 `json:"ipv4,omitempty" protobuf:"bytes,2,opt,name=ipv4"`
 	// IPv6 defines the ipv6 parameters for the subinterface
-	IPv6 *SubInterfaceIPv6 `json:"ipv6,omitempty" protobuf:"bytes,6,opt,name=ipv6"`
+	IPv6 *SubInterfaceIPv6 `json:"ipv6,omitempty" protobuf:"bytes,3,opt,name=ipv6"`
 }
 
 // SubInterfaceStatus defines the observed state of SubInterface
