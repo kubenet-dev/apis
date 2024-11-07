@@ -71,7 +71,7 @@ spec:
               peerAddress:
                 description: PeerAddress defines the peer address of the bgp neighbor
                 type: string
-              peergroup:
+              peerGroup:
                 description: PeerGroup defines the peer group of the bgp neighbor
                 type: string
               region:
@@ -87,7 +87,7 @@ spec:
             - partition
             - peerAS
             - peerAddress
-            - peergroup
+            - peerGroup
             - region
             - site
             type: object

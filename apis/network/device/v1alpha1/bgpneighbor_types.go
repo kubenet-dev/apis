@@ -37,7 +37,7 @@ type BGPNeighborSpec struct {
 	// PeerAddress defines the peer address of the bgp neighbor
 	PeerAddress string `json:"peerAddress" protobuf:"bytes,5,opt,name=peerAddress"`
 	// PeerGroup defines the peer group of the bgp neighbor
-	PeerGroup string `json:"peergroup" protobuf:"bytes,6,opt,name=peergroup"`
+	PeerGroup string `json:"peerGroup" protobuf:"bytes,6,opt,name=peerGroup"`
 	// BFD defines if BFD is enabled on the BGP peer group
 	BFD *bool `json:"bfd,omitempty" protobuf:"bytes,7,opt,name=bfd"`
 }
