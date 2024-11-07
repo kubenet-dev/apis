@@ -89,7 +89,7 @@ def build_link(self, topo_link, nodes):
       "name": join(".", link_parts),
     },
     "spec": {
-      #"internal": True,
+      "internal": True,
       "endpoints": endpoints,
     }
   }
