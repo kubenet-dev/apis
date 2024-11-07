@@ -57,7 +57,7 @@ def build_endpoint(self, portID, adaptor, connectorID):
     "apiVersion": "infra.kuid.dev/v1alpha1",
     "kind": "Endpoint",
     "metadata": {
-      "name": ".".join([self.get("metadata", {}).get("name", ""), str(portID), adaptor_name, str(connectorID)]),
+      "name": ".".join([self.get("metadata", {}).get("name", ""), str(portID), str(connectorID)]),
       "namespace": self.get("metadata", {}).get("namespace", ""),
     },
     "spec": {
