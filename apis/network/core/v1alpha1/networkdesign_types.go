@@ -19,11 +19,9 @@ package v1alpha1
 import (
 	"reflect"
 
-	//infrabev1alpha1 "github.com/kuidio/kuid/apis/backend/infra/v1alpha1"
-	//ipambev1alpha1 "github.com/kuidio/kuid/apis/backend/ipam/v1alpha1"
 	condv1alpha1 "github.com/kform-dev/choreo/apis/condition/v1alpha1"
 	metav1 "k8s.io/apimachinery/pkg/apis/meta/v1"
-	ipambev1alpha1 "github.com/kform-dev/choreo/apis/kuid/backend/ipam/v1alpha1"
+	ipambev1alpha1 "github.com/kuidio/kuid/apis/backend/ipam/v1alpha1"
 )
 
 

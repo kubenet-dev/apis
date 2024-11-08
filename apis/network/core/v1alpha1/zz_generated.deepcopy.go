@@ -21,7 +21,7 @@ limitations under the License.
 package v1alpha1
 
 import (
-	ipamv1alpha1 "github.com/kform-dev/choreo/apis/kuid/backend/ipam/v1alpha1"
+	ipamv1alpha1 "github.com/kuidio/kuid/apis/backend/ipam/v1alpha1"
 	"k8s.io/apimachinery/pkg/runtime"
 )
 
