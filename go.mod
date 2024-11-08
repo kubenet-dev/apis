@@ -6,7 +6,7 @@ toolchain go1.23.2
 
 require (
 	github.com/kform-dev/choreo v0.0.14-0.20241022144122-dcc4abf0f562
-	github.com/kuidio/kuid v0.0.9
+	github.com/kuidio/kuid v0.0.10-0.20241108171615-78dbc24f0994
 	k8s.io/apimachinery v0.32.0-alpha.1
 )
 
