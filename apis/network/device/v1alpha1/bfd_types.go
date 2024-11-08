@@ -28,7 +28,7 @@ import (
 // BFDSpec defines the desired state of BFD
 type BFDSpec struct {
 	// PartitionProviderNodeID defines the kuid node ID
-	kuididv1alpha1.PartitionProviderNodeID `json:",inline" protobuf:"bytes,1,opt,name=partitionEndpointID"`
+	kuididv1alpha1.PartitionProviderEndpointID `json:",inline" protobuf:"bytes,1,opt,name=partitionEndpointID"`
 	// ID defines the id of the BFD
 	ID uint32 `json:"id" protobuf:"bytes,2,opt,name=id"`
 	// Enabled defines if bfd is enabled or not
