@@ -20,14 +20,14 @@ import (
 	"reflect"
 
 	condv1alpha1 "github.com/kform-dev/choreo/apis/condition/v1alpha1"
-	kuididv1alpha1 "github.com/kform-dev/choreo/apis/kuid/id/v1alpha1"
+	kuididv1alpha1 "github.com/kuidio/kuid/apis/id/v1alpha1"
 	metav1 "k8s.io/apimachinery/pkg/apis/meta/v1"
 )
 
 // BGPDynamicNeighborSpec defines the desired state of BGPDynamicNeighbor
 type BGPDynamicNeighborSpec struct {
-	// PartitionNodeID defines the kuid node ID
-	kuididv1alpha1.PartitionNodeID `json:",inline" protobuf:"bytes,1,opt,name=partitionEndpointID"`
+	// PartitionProviderNodeID defines the kuid node ID
+	kuididv1alpha1.PartitionProviderNodeID `json:",inline" protobuf:"bytes,1,opt,name=partitionEndpointID"`
 	// Prefixes define the prefix list
 	// +listType=set
 	Prefixes []string `json:"prefixes,omitempty" protobuf:"bytes,2,rep,name=localAS"`

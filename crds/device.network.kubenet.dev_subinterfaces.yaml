@@ -195,9 +195,16 @@ spec:
                 - region
                 - site
                 type: object
+              platformType:
+                description: PlatformType define the type of platform implementing
+                  the nodespec
+                type: string
               port:
                 description: Port defines the id of the port
                 type: integer
+              provider:
+                description: Provider defines the provider implementing this resource.
+                type: string
               region:
                 description: Region defines the region of the resource
                 type: string
@@ -215,7 +222,9 @@ spec:
             - id
             - node
             - partition
+            - platformType
             - port
+            - provider
             - region
             - site
             - type

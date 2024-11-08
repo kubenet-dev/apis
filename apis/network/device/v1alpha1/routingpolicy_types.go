@@ -20,15 +20,15 @@ import (
 	"reflect"
 
 	condv1alpha1 "github.com/kform-dev/choreo/apis/condition/v1alpha1"
-	kuididv1alpha1 "github.com/kform-dev/choreo/apis/kuid/id/v1alpha1"
+	kuididv1alpha1 "github.com/kuidio/kuid/apis/id/v1alpha1"
 	corenetworkv1alpha1 "github.com/kubenet-dev/apis/apis/network/core/v1alpha1"
 	metav1 "k8s.io/apimachinery/pkg/apis/meta/v1"
 )
 
 // RoutingPolicySpec defines the desired state of RoutingPolicy
 type RoutingPolicySpec struct {
-	// PartitionNodeID defines the kuid node ID
-	kuididv1alpha1.PartitionNodeID `json:",inline" protobuf:"bytes,1,opt,name=partitionEndpointID"`
+	// PartitionProviderNodeID defines the kuid node ID
+	kuididv1alpha1.PartitionProviderNodeID `json:",inline" protobuf:"bytes,1,opt,name=partitionEndpointID"`
 	// Name defines the name of the routing policy
 	Name string `json:"name" protobuf:"bytes,2,opt,name=name"`
 	// DefaultAction defines the default action of the route policy

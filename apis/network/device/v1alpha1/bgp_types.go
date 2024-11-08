@@ -20,14 +20,14 @@ import (
 	"reflect"
 
 	condv1alpha1 "github.com/kform-dev/choreo/apis/condition/v1alpha1"
-	kuididv1alpha1 "github.com/kform-dev/choreo/apis/kuid/id/v1alpha1"
+	kuididv1alpha1 "github.com/kuidio/kuid/apis/id/v1alpha1"
 	metav1 "k8s.io/apimachinery/pkg/apis/meta/v1"
 )
 
 // BGPSpec defines the desired state of BGP
 type BGPSpec struct {
-	// PartitionNodeID defines the kuid node ID
-	kuididv1alpha1.PartitionNodeID `json:",inline" protobuf:"bytes,1,opt,name=partitionEndpointID"`
+	// PartitionProviderNodeID defines the kuid node ID
+	kuididv1alpha1.PartitionProviderNodeID `json:",inline" protobuf:"bytes,1,opt,name=partitionEndpointID"`
 	// AS defines the autonomous system
 	AS uint32 `json:"as" protobuf:"bytes,2,opt,name=as"`
 	// RouterID defines the router ID

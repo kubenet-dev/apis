@@ -118,6 +118,13 @@ spec:
                 x-kubernetes-list-map-keys:
                 - name
                 x-kubernetes-list-type: map
+              platformType:
+                description: PlatformType define the type of platform implementing
+                  the nodespec
+                type: string
+              provider:
+                description: Provider defines the provider implementing this resource.
+                type: string
               region:
                 description: Region defines the region of the resource
                 type: string
@@ -132,6 +139,8 @@ spec:
             - node
             - partition
             - peerGroups
+            - platformType
+            - provider
             - region
             - routerID
             - site

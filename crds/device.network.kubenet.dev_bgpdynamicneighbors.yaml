@@ -123,12 +123,19 @@ spec:
                 description: Partition defines the partition this resource belongs
                   to
                 type: string
+              platformType:
+                description: PlatformType define the type of platform implementing
+                  the nodespec
+                type: string
               prefixes:
                 description: Prefixes define the prefix list
                 items:
                   type: string
                 type: array
                 x-kubernetes-list-type: set
+              provider:
+                description: Provider defines the provider implementing this resource.
+                type: string
               region:
                 description: Region defines the region of the resource
                 type: string
@@ -138,6 +145,8 @@ spec:
             required:
             - node
             - partition
+            - platformType
+            - provider
             - region
             - site
             type: object

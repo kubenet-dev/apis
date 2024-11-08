@@ -45,15 +45,9 @@ spec:
           spec:
             description: BFDSpec defines the desired state of BFD
             properties:
-              adaptor:
-                description: Adaptor defines the name of the adaptor
-                type: string
               enabled:
                 description: Disabled defines if bfd is disabled or not
                 type: boolean
-              endpoint:
-                description: Endpoint defines the name of the endpoint
-                type: integer
               id:
                 description: ID defines the id of the BFD
                 format: int32
@@ -72,20 +66,11 @@ spec:
                   BFD packets, in msec.
                 format: int32
                 type: integer
-              module:
-                description: Module defines the module reference id
-                type: integer
-              moduleBay:
-                description: ModuleBay defines the moduleBay reference id
-                type: integer
               multiplier:
                 description: Multiplier defines the number of missed packets before
                   the session is considered down
                 format: int32
                 type: integer
-              name:
-                description: Name is used to refer to internal names of the node
-                type: string
               node:
                 description: Node defines the name of the node
                 type: string
@@ -93,9 +78,13 @@ spec:
                 description: Partition defines the partition this resource belongs
                   to
                 type: string
-              port:
-                description: Port defines the id of the port
-                type: integer
+              platformType:
+                description: PlatformType define the type of platform implementing
+                  the nodespec
+                type: string
+              provider:
+                description: Provider defines the provider implementing this resource.
+                type: string
               region:
                 description: Region defines the region of the resource
                 type: string
@@ -109,11 +98,11 @@ spec:
                 minimum: 2
                 type: integer
             required:
-            - endpoint
             - id
             - node
             - partition
-            - port
+            - platformType
+            - provider
             - region
             - site
             type: object

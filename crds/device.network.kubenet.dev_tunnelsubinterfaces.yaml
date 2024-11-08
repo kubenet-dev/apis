@@ -63,12 +63,26 @@ spec:
               moduleBay:
                 description: ModuleBay defines the moduleBay reference id
                 type: integer
+              name:
+                description: Name is used to refer to internal names of the node
+                type: string
               node:
                 description: Node defines the name of the node
+                type: string
+              partition:
+                description: Partition defines the partition this resource belongs
+                  to
+                type: string
+              platformType:
+                description: PlatformType define the type of platform implementing
+                  the nodespec
                 type: string
               port:
                 description: Port defines the id of the port
                 type: integer
+              provider:
+                description: Provider defines the provider implementing this resource.
+                type: string
               region:
                 description: Region defines the region of the resource
                 type: string
@@ -82,11 +96,13 @@ spec:
                 - bridged
                 type: string
             required:
-            - adaptor
             - endpoint
             - id
             - node
+            - partition
+            - platformType
             - port
+            - provider
             - region
             - site
             - type

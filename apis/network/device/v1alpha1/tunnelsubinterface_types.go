@@ -20,14 +20,15 @@ import (
 	"reflect"
 
 	condv1alpha1 "github.com/kform-dev/choreo/apis/condition/v1alpha1"
-	kuididv1alpha1 "github.com/kform-dev/choreo/apis/kuid/id/v1alpha1"
+	kuididv1alpha1 "github.com/kuidio/kuid/apis/id/v1alpha1"
 	corenetworkv1alpha1 "github.com/kubenet-dev/apis/apis/network/core/v1alpha1"
 	metav1 "k8s.io/apimachinery/pkg/apis/meta/v1"
 )
 
 // TunnelTunnelSubInterfaceSpec defines the desired state of TunnelSubInterface
 type TunnelSubInterfaceSpec struct {
-	kuididv1alpha1.EndpointID `json:",inline" protobuf:"bytes,1,opt,name=partitionEndpointID"`
+	// PartitionProviderEndpointID defines the kuid ep ID
+	kuididv1alpha1.PartitionProviderEndpointID `json:",inline" protobuf:"bytes,1,opt,name=partitionEndpointID"`
 	// ID defines the id of the tunnel subinterface
 	ID uint32 `json:"id" yaml:"id" protobuf:"bytes,2,opt,name=id"`
 	// Type defines the subinterface type

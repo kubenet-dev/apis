@@ -52,6 +52,13 @@ spec:
                 description: Partition defines the partition this resource belongs
                   to
                 type: string
+              platformType:
+                description: PlatformType define the type of platform implementing
+                  the nodespec
+                type: string
+              provider:
+                description: Provider defines the provider implementing this resource.
+                type: string
               region:
                 description: Region defines the region of the resource
                 type: string
@@ -61,6 +68,8 @@ spec:
             required:
             - node
             - partition
+            - platformType
+            - provider
             - region
             - site
             type: object

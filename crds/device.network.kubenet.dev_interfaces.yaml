@@ -81,9 +81,16 @@ spec:
                 description: Partition defines the partition this resource belongs
                   to
                 type: string
+              platformType:
+                description: PlatformType define the type of platform implementing
+                  the nodespec
+                type: string
               port:
                 description: Port defines the id of the port
                 type: integer
+              provider:
+                description: Provider defines the provider implementing this resource.
+                type: string
               region:
                 description: Region defines the region of the resource
                 type: string
@@ -98,7 +105,9 @@ spec:
             - endpoint
             - node
             - partition
+            - platformType
             - port
+            - provider
             - region
             - site
             type: object

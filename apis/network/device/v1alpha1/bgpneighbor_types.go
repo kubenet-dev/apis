@@ -20,14 +20,14 @@ import (
 	"reflect"
 
 	condv1alpha1 "github.com/kform-dev/choreo/apis/condition/v1alpha1"
-	kuididv1alpha1 "github.com/kform-dev/choreo/apis/kuid/id/v1alpha1"
+	kuididv1alpha1 "github.com/kuidio/kuid/apis/id/v1alpha1"
 	metav1 "k8s.io/apimachinery/pkg/apis/meta/v1"
 )
 
 // BGPNeighborSpec defines the desired state of BGPNeighbor
 type BGPNeighborSpec struct {
-	// PartitionNodeID defines the kuid node ID
-	kuididv1alpha1.PartitionNodeID `json:",inline" protobuf:"bytes,1,opt,name=partitionEndpointID"`
+	// PartitionProviderNodeID defines the kuid node ID
+	kuididv1alpha1.PartitionProviderNodeID `json:",inline" protobuf:"bytes,1,opt,name=partitionEndpointID"`
 	// LocalAS defines the local autonomous system of the bgp neighbor
 	LocalAS uint32 `json:"localAS" protobuf:"bytes,2,opt,name=localAS"`
 	// LocalAddress defines the local address of the bgp neighbor

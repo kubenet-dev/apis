@@ -6,7 +6,7 @@ toolchain go1.23.2
 
 require (
 	github.com/kform-dev/choreo v0.0.14-0.20241022144122-dcc4abf0f562
-	github.com/kuidio/kuid v0.0.8-0.20241030070053-17bc7b6f6501
+	github.com/kuidio/kuid v0.0.9
 	k8s.io/apimachinery v0.32.0-alpha.1
 )
 
@@ -53,7 +53,7 @@ require (
 	github.com/grpc-ecosystem/go-grpc-prometheus v1.2.0 // indirect
 	github.com/grpc-ecosystem/grpc-gateway/v2 v2.20.0 // indirect
 	github.com/henderiw/apiserver-builder v0.0.4-0.20241027084658-10d7f9d97252 // indirect
-	github.com/henderiw/apiserver-store v0.0.3-0.20241029192510-f861391edccf // indirect
+	github.com/henderiw/apiserver-store v0.0.3-0.20241106073231-cbded10a8cee // indirect
 	github.com/henderiw/idxtable v0.0.0-20241021085446-f8d804551342 // indirect
 	github.com/henderiw/iputil v0.0.0-20231218081610-37f78ad9c81c // indirect
 	github.com/henderiw/logger v0.0.0-20230911123436-8655829b1abe // indirect
