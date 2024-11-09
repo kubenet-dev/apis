@@ -32,6 +32,7 @@ def build_node(self, topo_node):
       "node": node_name,
       "provider": get_value_or_default(topo_node, defaults, "provider"),
       "platformType": get_value_or_default(topo_node, defaults, "platformType"),
+      "version": get_value_or_default(topo_node, defaults, "version"),
     }
   }
   optional_fields = ["rack", "position", "location"]
