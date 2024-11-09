@@ -61,6 +61,8 @@ type TopologyNode struct {
 	Provider *string `json:"provider,omitempty" protobuf:"bytes,8,opt,name=provider"`
 	// PlatformType define the type of platform implementing the nodespec
 	PlatformType *string `json:"platformType,omitempty" protobuf:"bytes,9,opt,name=platformType"`
+	// Version define the sw version implementing the resource
+	Version *string `json:"version,omitempty" protobuf:"bytes,10,opt,name=version"`
 }
 
 type TopologyLink struct {

@@ -90,6 +90,9 @@ spec:
                   site:
                     description: Site defines the site this resource belongs to
                     type: string
+                  version:
+                    description: Version define the sw version implementing the resource
+                    type: string
                 type: object
               links:
                 description: Links define the links interconnecting the nodes in the
@@ -284,6 +287,10 @@ spec:
                       type: string
                     site:
                       description: Site defines the site this resource belongs to
+                      type: string
+                    version:
+                      description: Version define the sw version implementing the
+                        resource
                       type: string
                   type: object
                 type: array
