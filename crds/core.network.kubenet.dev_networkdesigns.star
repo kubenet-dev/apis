@@ -57,7 +57,7 @@ def get_genidindex(self):
       "name": self.get("metadata", {}).get("name", ""),
     },
     "spec": {
-      "minID": 0,
+      "minID": 10,
       "maxID": 16383,
       "type": "16bit",
     },
