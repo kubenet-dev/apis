@@ -13,7 +13,6 @@ def get_ipindex(self):
   interface_loopback = self.get("spec", {}).get("interfaces", {}).get("loopback", {})
   for prefix in interface_loopback.get("prefixes", []):
     prefixes.append({
-      "prefixType": "pool",
       "prefix": prefix.get("prefix", {}),
       "labels": {"infra.kuid.dev/purpose": "loopback"},
     })
