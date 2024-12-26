@@ -38,7 +38,7 @@ type InterfaceSpec struct {
 	MTU uint32 `json:"mtu,omitempty" protobuf:"bytes,4,opt,name=mtu"`
 
 	//TBD
-	// Loopback 
+	// Loopback
 	// HoldUp - msec
 	// HoldDown - msec
 }

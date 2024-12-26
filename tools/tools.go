@@ -1,3 +1,5 @@
+// +build tools
+
 /*
 Copyright 2024 Nokia.
 
@@ -14,14 +16,10 @@ See the License for the specific language governing permissions and
 limitations under the License.
 */
 
-package v1alpha1
+// This package imports things required by build scripts, to force `go mod` to see them as dependencies
+package tools
 
-type Addressing string
-
-const (
-	Addressing_DualStack      Addressing = "dualstack"
-	Addressing_IPv4Numbered   Addressing = "ipv4numbered"
-	Addressing_IPv6Numbered   Addressing = "ipv6numbered"
-	Addressing_IPv6Unnumbered Addressing = "ipv6unnumbered"
-	Addressing_IPv4Unnumbered Addressing = "ipv4unnumbered"
+import (
+	//_ "github.com/golangci/golangci-lint/cmd/golangci-lint"
+	_ "k8s.io/code-generator"
 )

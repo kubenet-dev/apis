@@ -30,12 +30,12 @@ func (in *TopologyEndpoint) DeepCopyInto(out *TopologyEndpoint) {
 	*out = *in
 	if in.ModuleBay != nil {
 		in, out := &in.ModuleBay, &out.ModuleBay
-		*out = new(int)
+		*out = new(uint32)
 		**out = **in
 	}
 	if in.Module != nil {
 		in, out := &in.Module, &out.Module
-		*out = new(int)
+		*out = new(uint32)
 		**out = **in
 	}
 }
@@ -133,6 +133,11 @@ func (in *TopologyNode) DeepCopyInto(out *TopologyNode) {
 	}
 	if in.PlatformType != nil {
 		in, out := &in.PlatformType, &out.PlatformType
+		*out = new(string)
+		**out = **in
+	}
+	if in.Version != nil {
+		in, out := &in.Version, &out.Version
 		*out = new(string)
 		**out = **in
 	}

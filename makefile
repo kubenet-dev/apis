@@ -1,3 +1,5 @@
+REPO = github.com/kubenet-dev/apis
+
 ## Location to install dependencies to
 LOCALBIN ?= $(shell pwd)/bin
 $(LOCALBIN):
@@ -43,3 +45,8 @@ crds: controller-gen ## Generate WebhookConfiguration, ClusterRole and CustomRes
 controller-gen: $(CONTROLLER_GEN) ## Download controller-gen locally if necessary.
 $(CONTROLLER_GEN): $(LOCALBIN)
 	test -s $(LOCALBIN)/controller-gen || GOBIN=$(LOCALBIN) go install sigs.k8s.io/controller-tools/cmd/controller-gen@$(CONTROLLER_TOOLS_VERSION)
+
+genproto:
+	go run ./tools/apiserver-runtime-gen \
+		-g go-to-protobuf \
+		--module $(REPO) \

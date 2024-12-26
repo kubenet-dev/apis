@@ -27,7 +27,7 @@ import (
 type NodeTemplateSpec struct {
 	Provider     string              `json:"provider" protobuf:"bytes,1,opt,name=provider"`
 	PlatformType string              `json:"platformType" protobuf:"bytes,2,opt,name=platformType"`
-	Ports        []*NodeTemplatePort `json:"ports" protobuf:"bytes,2,opt,name=ports"`
+	Ports        []*NodeTemplatePort `json:"ports" protobuf:"bytes,3,opt,name=ports"`
 }
 
 type NodeTemplatePort struct {
@@ -36,15 +36,15 @@ type NodeTemplatePort struct {
 }
 
 type NodeTemplatePortIds struct {
-	Start uint `json:"start" protobuf:"bytes,1,opt,name=start"`
-	End  uint `json:"end" protobuf:"bytes,2,opt,name=end"`
+	Start uint32 `json:"start" protobuf:"bytes,1,opt,name=start"`
+	End   uint32 `json:"end" protobuf:"bytes,2,opt,name=end"`
 }
 
 type NodeTemplatePortAdaptor struct {
 	Name       string `json:"name" protobuf:"bytes,1,opt,name=name"`
 	Speed      string `json:"speed" protobuf:"bytes,2,opt,name=speed"`
 	Pluggable  bool   `json:"pluggable" protobuf:"bytes,3,opt,name=pluggable"`
-	Connectors uint   `json:"connectors" protobuf:"bytes,4,opt,name=connectors"`
+	Connectors uint32 `json:"connectors" protobuf:"bytes,4,opt,name=connectors"`
 }
 
 // NodeTemplateStatus defines the observed state of NodeTemplate

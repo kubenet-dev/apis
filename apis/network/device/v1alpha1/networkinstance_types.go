@@ -20,8 +20,8 @@ import (
 	"reflect"
 
 	condv1alpha1 "github.com/kform-dev/choreo/apis/condition/v1alpha1"
-	kuididv1alpha1 "github.com/kuidio/kuid/apis/id/v1alpha1"
 	corenetworkv1alpha1 "github.com/kubenet-dev/apis/apis/network/core/v1alpha1"
+	kuididv1alpha1 "github.com/kuidio/kuid/apis/id/v1alpha1"
 	metav1 "k8s.io/apimachinery/pkg/apis/meta/v1"
 )
 
@@ -39,7 +39,7 @@ type NetworkInstanceSpec struct {
 	// Interfaces defines interfaces belonging to the network instance
 	// +listType=map
 	// +listMapKey=partition
-    // +listMapKey=region
+	// +listMapKey=region
 	// +listMapKey=site
 	// +listMapKey=node
 	// +listMapKey=port
@@ -63,7 +63,6 @@ type NetworkInstanceVXLANInterface struct {
 	// ID defines the id of the subinterface
 	ID uint32 `json:"id" protobuf:"bytes,2,opt,name=id"`
 }
-
 
 // NetworkInstanceStatus defines the observed state of NetworkInstance
 type NetworkInstanceStatus struct {

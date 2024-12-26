@@ -42,7 +42,6 @@ type BGPNeighborSpec struct {
 	BFD *bool `json:"bfd,omitempty" protobuf:"bytes,7,opt,name=bfd"`
 }
 
-
 // BGPNeighborStatus defines the observed state of BGPNeighbor
 type BGPNeighborStatus struct {
 	// ConditionedStatus provides the status of the Readiness using conditions

@@ -35,18 +35,18 @@ type BGPSpec struct {
 	// +listType=map
 	// +listMapKey=name
 	// AddressFamilies defines the address families that need to be enabled globally
-	AddressFamilies []*BGPAddressFamily `json:"addressFamilies,omitempty" protobuf:"bytes,6,rep,name=addressFamilies"`
+	AddressFamilies []*BGPAddressFamily `json:"addressFamilies,omitempty" protobuf:"bytes,4,rep,name=addressFamilies"`
 	// +listType=map
 	// +listMapKey=name
 	// PeerGroups define the peer groups for the BGP instance
-	PeerGroups []BGPPeerGroup `json:"peerGroups" protobuf:"bytes,3,opt,name=peerGroups"`
+	PeerGroups []BGPPeerGroup `json:"peerGroups" protobuf:"bytes,5,opt,name=peerGroups"`
 }
 
 type BGPPeerGroup struct {
 	// Name defines the name of the peer group family
 	Name string `json:"name" protobuf:"bytes,1,opt,name=name"`
 	// Address families define the address families to be disabled
-	AddressFamilies []*BGPAddressFamily `json:"addressFamilies,omitempty"  protobuf:"bytes,2,rep,name=addressFamilies"`
+	AddressFamilies []*BGPAddressFamily `json:"addressFamilies,omitempty" protobuf:"bytes,2,rep,name=addressFamilies"`
 	// RouteReflector defines the RouteReflector parameters
 	RouteReflector *BGPRouteReflector `json:"routeReflector,omitempty" protobuf:"bytes,3,opt,name=routeReflector"`
 	// BFD defines if BFD is enabled on the BGP peer group

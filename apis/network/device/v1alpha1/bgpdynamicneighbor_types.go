@@ -34,7 +34,7 @@ type BGPDynamicNeighborSpec struct {
 	// Interfaces define the interfaces on which the dynamic BGP neighbor are associated
 	// +listType=map
 	// +listMapKey=partition
-    // +listMapKey=region
+	// +listMapKey=region
 	// +listMapKey=site
 	// +listMapKey=node
 	// +listMapKey=port
@@ -52,9 +52,7 @@ type BGPDynamicNeighborInterface struct {
 	PeerAS uint32 `json:"peerAS" protobuf:"bytes,3,opt,name=peerAS"`
 	// PeerGroup defines the peer group of the bgp neighbor
 	PeerGroup string `json:"peerGroup" protobuf:"bytes,4,opt,name=peerGroup"`
-
 }
-
 
 // BGPDynamicNeighborStatus defines the observed state of BGPDynamicNeighbor
 type BGPDynamicNeighborStatus struct {

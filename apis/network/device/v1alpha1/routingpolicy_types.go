@@ -20,8 +20,8 @@ import (
 	"reflect"
 
 	condv1alpha1 "github.com/kform-dev/choreo/apis/condition/v1alpha1"
-	kuididv1alpha1 "github.com/kuidio/kuid/apis/id/v1alpha1"
 	corenetworkv1alpha1 "github.com/kubenet-dev/apis/apis/network/core/v1alpha1"
+	kuididv1alpha1 "github.com/kuidio/kuid/apis/id/v1alpha1"
 	metav1 "k8s.io/apimachinery/pkg/apis/meta/v1"
 )
 
@@ -32,7 +32,7 @@ type RoutingPolicySpec struct {
 	// Name defines the name of the routing policy
 	Name string `json:"name" protobuf:"bytes,2,opt,name=name"`
 	// DefaultAction defines the default action of the route policy
-	DefaultAction                  RoutingPolicyStatementAction `json:"defaultAction" protobuf:"bytes,3,opt,name=defaultAction"`
+	DefaultAction RoutingPolicyStatementAction `json:"defaultAction" protobuf:"bytes,3,opt,name=defaultAction"`
 	// Statements defines the routing policy statements
 	// +listType=map
 	// +listMapKey=id
